@@ -4,7 +4,7 @@ Aplikasi Data Vaksinasi Warga untuk Kelurahan Munjul Jakarta Timur dengan Netbea
 Aplikasi dibuat dengan 2 menu login, untuk admin dan user
 
 Untuk kontribusinya dipersilahkan
-=========================================================================================================================
+=================================================================
 + Build With //
 + Netbeanas IDE 8.2
 + Xampp v3.3.0
@@ -22,9 +22,11 @@ Untuk kontribusinya dipersilahkan
 + jasperreports-6.0.0
 + JCalendar-1.3.3
 + mysql-connector-java-5.1.23-bin
-=========================================================================================================================
+=======================================================
 
 View :
+
+
 ![Utama](https://user-images.githubusercontent.com/62686080/120236063-a0413900-c285-11eb-96a5-d87d212b2397.PNG)
 
 ![loginadmin](https://user-images.githubusercontent.com/62686080/120236078-ac2cfb00-c285-11eb-9340-eca0f51ca5bd.PNG)
