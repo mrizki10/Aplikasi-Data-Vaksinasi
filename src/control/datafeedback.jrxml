@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bd5cc823-6ddb-4f28-bc83-d5f4f88ca3be">
+	<property name="ireport.zoom" value="1.4641000000000024"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     feedback.`nik` AS feedback_nik,
+     feedback.`nama` AS feedback_nama,
+     feedback.`kritik_saran` AS feedback_kritik_saran
+FROM
+     `feedback` feedback]]>
+	</queryString>
+	<field name="feedback_nik" class="java.lang.Long"/>
+	<field name="feedback_nama" class="java.lang.String"/>
+	<field name="feedback_kritik_saran" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="62" width="449" height="39" uuid="5e101645-abf0-4766-a354-2c47bc6c19a6"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[JI. Sina Marga NO.2 Telepon: 021-8444659, Fax: 021-8444636 Email: kecamatancipayungjaktim@yahoo.com Kode Pos : 13840]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="44" width="243" height="18" uuid="7e57dd7f-5e07-4339-8083-922b097c1404"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN CIPAYUNG]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="11" width="70" height="90" uuid="76e071ec-c92c-4d5b-a723-22be4b77611f"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Documents\\NetBeansProjects\\AplikasiDataVaksin\\src\\image\\Jakarta.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="102" y="10" width="437" height="17" uuid="c553ec2d-2b0b-4d67-8b58-8d43bb43f62a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH PROVINSI DAERAH KHUSUS IBU KOTA JAKARTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="27" width="314" height="17" uuid="16ce4cd0-340e-4d75-b38f-114d52d3d2c3"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KOTA ADMINISTRASI JAKARTA TIMUR]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="101" width="555" height="1" uuid="2d4e84ed-d712-4315-a9ca-d132602effd2"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="a422b6e6-e67b-4202-b91a-7184cfafee20"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="2" y="9" width="100" height="20" uuid="060fa99f-57d1-4e88-82f7-96ded0c965c8"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="11" width="149" height="20" uuid="fe4c9785-a889-4dbc-91be-4774b14d667f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="11" width="149" height="20" uuid="e4bf1231-f0ea-495b-8bb6-9ef205382c53"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="149" y="11" width="154" height="20" uuid="3368953a-f076-4d41-9965-a4467bce2bee"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="149" y="11" width="154" height="20" uuid="0f1e6ae7-9f33-4394-b8bd-0285d685ee93"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="303" y="11" width="252" height="20" uuid="0cab4bf5-2d04-495b-914a-2b5110ca4935"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="303" y="11" width="252" height="20" uuid="3d802c4e-fd4f-462d-b72e-ea17bbc8b1af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kritik dan Saran]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="149" height="20" uuid="78e16d2c-0d09-40ce-8137-d74fb97652b8"/>
+			</rectangle>
+			<textField>
+				<reportElement x="20" y="0" width="129" height="20" uuid="b2e3698f-8454-45b8-9036-89314e29f97d"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{feedback_nik}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="149" y="0" width="154" height="20" uuid="1db8de37-c282-46a3-bd36-40df07d8e894"/>
+			</rectangle>
+			<textField>
+				<reportElement x="159" y="0" width="144" height="20" uuid="5eb2e087-a1e3-4130-a84a-dfdc5d04466a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{feedback_nama}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="303" y="0" width="252" height="20" uuid="21d3088b-be80-4966-84d9-0e8cb5ff07eb"/>
+			</rectangle>
+			<textField>
+				<reportElement x="313" y="0" width="242" height="20" uuid="54f0da80-a598-4011-aad0-f709f929657f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{feedback_kritik_saran}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

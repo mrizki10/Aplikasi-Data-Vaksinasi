@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="07ef82c5-2261-46f5-8738-3a575facd420">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     anggaran.`jumlah_vaksin` AS anggaran_jumlah_vaksin,
+     anggaran.`harga` AS anggaran_harga,
+     anggaran.`total_anggaran` AS anggaran_total_anggaran,
+     anggaran.`total_tagihan` AS anggaran_total_tagihan,
+     anggaran.`sisa` AS anggaran_sisa
+FROM
+     `anggaran` anggaran]]>
+	</queryString>
+	<field name="anggaran_jumlah_vaksin" class="java.lang.String"/>
+	<field name="anggaran_harga" class="java.lang.String"/>
+	<field name="anggaran_total_anggaran" class="java.lang.String"/>
+	<field name="anggaran_total_tagihan" class="java.lang.String"/>
+	<field name="anggaran_sisa" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

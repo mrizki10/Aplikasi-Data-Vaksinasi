@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="101a5332-0873-4fba-b703-e7b5a60a970a">
+	<property name="ireport.zoom" value="1.4641000000000057"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="pkode" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     penjadwalan.`kode_vaksin` AS penjadwalan_kode_vaksin,
+     penjadwalan.`id_petugas` AS penjadwalan_id_petugas,
+     penjadwalan.`nama_petugas` AS penjadwalan_nama_petugas,
+     penjadwalan.`nama_warga` AS penjadwalan_nama_warga,
+     penjadwalan.`nik` AS penjadwalan_nik,
+     penjadwalan.`tempat` AS penjadwalan_tempat,
+     penjadwalan.`tanggal` AS penjadwalan_tanggal
+FROM
+     `penjadwalan` penjadwalan
+where 
+	kode_vaksin = $P{pkode}]]>
+	</queryString>
+	<field name="penjadwalan_kode_vaksin" class="java.lang.String"/>
+	<field name="penjadwalan_id_petugas" class="java.lang.String"/>
+	<field name="penjadwalan_nama_petugas" class="java.lang.String"/>
+	<field name="penjadwalan_nama_warga" class="java.lang.String"/>
+	<field name="penjadwalan_nik" class="java.lang.Long"/>
+	<field name="penjadwalan_tempat" class="java.lang.String"/>
+	<field name="penjadwalan_tanggal" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="78" width="555" height="1" uuid="5bd814d4-635a-4821-910f-bd6422ce1dc5"/>
+			</line>
+			<staticText>
+				<reportElement x="98" y="1" width="437" height="17" uuid="2d9f0107-a41f-4841-8fae-528cea916401"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH PROVINSI DAERAH KHUSUS IBU KOTA JAKARTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="18" width="314" height="17" uuid="f7c7fd45-5f4e-4fa2-86a7-c8be2f1f47b3"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KOTA ADMINISTRASI JAKARTA TIMUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="35" width="243" height="18" uuid="b48fa7b2-622f-4f48-a578-302e717de4d1"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN CIPAYUNG]]></text>
+			</staticText>
+			<image>
+				<reportElement x="16" y="0" width="70" height="78" uuid="75fd236c-3671-4853-b012-b8bc310e015f"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Documents\\NetBeansProjects\\AplikasiDataVaksin\\src\\image\\Jakarta.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="84" y="51" width="451" height="28" uuid="697f7207-b7d1-4133-a165-e803499f643e"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[JI. Sina Marga NO.2 Telepon: 021-8444659, Fax: 021-8444636 Email: kecamatancipayungjaktim@yahoo.com Kode Pos : 13840]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="f82930ba-7572-4aa8-95f5-0e7f18d38c02"/>
+			</line>
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" uuid="2a5bf445-722c-4e38-b0d9-eadc57768612"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="14" width="100" height="20" uuid="48853c46-9c15-448e-827d-8e68c08bcc3f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="155" splitType="Stretch">
+			<textField>
+				<reportElement x="149" y="1" width="191" height="20" uuid="28500ca6-9197-44bf-94f9-c7bafe15a0bf"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penjadwalan_kode_vaksin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="21" width="191" height="20" uuid="59b0a4ea-7b08-491c-8909-7a8644b93236"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penjadwalan_id_petugas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="41" width="191" height="20" uuid="ff7a752d-b93b-498c-8abc-723c42b71188"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penjadwalan_nama_petugas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="61" width="191" height="20" uuid="9e2968e0-f964-4157-a3fc-a4fc277de8de"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penjadwalan_nama_warga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="81" width="191" height="20" uuid="d89b0603-b401-4a5b-a2ec-3d2e11cc4d49"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penjadwalan_nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="101" width="191" height="20" uuid="e91e8198-a898-457a-8546-b883e9b64aac"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penjadwalan_tempat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="121" width="191" height="20" uuid="f9595a88-283c-4ede-b2c5-bdb45fdd8eec"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penjadwalan_tanggal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="1" width="150" height="20" uuid="1aae2bfb-477a-46b6-9f28-a8ee09368b85"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Vaksin		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="21" width="149" height="20" uuid="4307c836-3961-4b31-9af2-ac22f7d1b607"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Petugas		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="149" height="20" uuid="af077e86-bbd2-47fa-9fae-f89c07477721"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Petugas		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="61" width="149" height="20" uuid="bb88cf62-ced0-4890-b2d4-e1b9d78af6b9"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Warga		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="81" width="149" height="20" uuid="136f689d-f01b-4278-b676-80bb8094d203"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK		         	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="101" width="149" height="20" uuid="8caf8117-c8a5-4d6d-935a-1c53203351a0"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tempat			:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="121" width="149" height="20" uuid="2e42d7e2-ed8f-4fab-8aa5-b61bfe5340e1"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal			:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="154" width="555" height="1" uuid="48dceddb-8fc0-4c48-9edc-d7748ecbb924"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

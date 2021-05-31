@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4df38d44-76b8-4712-87df-639319e412b0">
+	<property name="ireport.zoom" value="1.6105100000000012"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="60"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     user_rt.`nik_user` AS user_rt_nik_user,
+     user_rt.`nama` AS user_rt_nama,
+     user_rt.`username` AS user_rt_username,
+     user_rt.`password` AS user_rt_password
+FROM
+     `user_rt` user_rt]]>
+	</queryString>
+	<field name="user_rt_nik_user" class="java.lang.Long"/>
+	<field name="user_rt_nama" class="java.lang.String"/>
+	<field name="user_rt_username" class="java.lang.String"/>
+	<field name="user_rt_password" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement x="154" y="17" width="314" height="17" uuid="bad33096-50d4-4a35-8155-405a902d03b5"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KOTA ADMINISTRASI JAKARTA TIMUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="0" width="437" height="17" uuid="a564449a-e0c1-4bfa-b097-949b504511a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH PROVINSI DAERAH KHUSUS IBU KOTA JAKARTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="34" width="243" height="18" uuid="97a30ef9-d463-42da-9b9d-4dadf17641b4"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN CIPAYUNG]]></text>
+			</staticText>
+			<image>
+				<reportElement x="27" y="2" width="70" height="90" uuid="70c68267-dfd7-44df-9475-0cdf2ed4d091"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Documents\\NetBeansProjects\\AplikasiDataVaksin\\src\\image\\Jakarta.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="97" y="52" width="447" height="39" uuid="8c175042-1520-490f-b2fe-e4faffb698e0"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[JI. Sina Marga NO.2 Telepon: 021-8444659, Fax: 021-8444636 Email: kecamatancipayungjaktim@yahoo.com Kode Pos : 13840]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="91" width="555" height="1" uuid="58deb32a-a9b1-4b52-a5a0-de3fd1e7be29"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="27" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="616b68fa-caa9-4454-a3c5-458a20922b0e"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="7" width="100" height="20" uuid="acbe0406-b828-49e2-bbd0-cea0e1cb636d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="426" y="11" width="129" height="20" uuid="257d86fc-146c-403d-998e-cc772fb93c49"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="426" y="11" width="129" height="20" uuid="29f85cdd-2b91-4487-8297-4e3d0177dfa5"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="292" y="11" width="134" height="20" uuid="686cd4d8-7aae-40f1-b667-3f0098a1b3c6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="292" y="11" width="134" height="20" uuid="3c451d38-7eb8-4c96-ab26-56ab650b78e8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Username]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="136" y="11" width="156" height="20" uuid="e1b9ae8c-208e-481b-a95e-1054b4f81d2c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="136" y="11" width="156" height="20" uuid="4ad4622c-9081-415b-b593-b82aaef96fc4"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="11" width="136" height="20" uuid="c1f7faf9-f361-4812-a064-93bfcd3b3b6d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="11" width="136" height="20" uuid="d8e0e1a1-38ad-499b-a7d4-f2a41efc5204"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK User]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="426" y="0" width="129" height="20" uuid="98e91bed-4900-4a0d-99eb-ce1db63eaa42"/>
+			</rectangle>
+			<textField>
+				<reportElement x="436" y="0" width="119" height="20" uuid="aa79f2b6-b87c-4d88-b627-a0b75831163c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{user_rt_password}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="292" y="0" width="134" height="20" uuid="ca4643f3-3a40-44b2-860b-73084bdc5eee"/>
+			</rectangle>
+			<textField>
+				<reportElement x="302" y="0" width="124" height="20" uuid="bf3763bd-a1fd-4ef0-86d4-6f7b1f1f7743"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{user_rt_username}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="136" y="0" width="156" height="20" uuid="0e4f5059-ebb4-449a-8c38-9f0ff77687bf"/>
+			</rectangle>
+			<textField>
+				<reportElement x="154" y="0" width="138" height="20" uuid="d85554aa-3725-4670-8e3f-c74f11800478"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{user_rt_nama}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="0" width="136" height="20" uuid="77dd0fa5-0681-4225-8d0e-a67da3c2c8e4"/>
+			</rectangle>
+			<textField>
+				<reportElement x="11" y="0" width="125" height="20" uuid="c6686ae3-f1f2-454b-a851-73df0ddb62bb"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{user_rt_nik_user}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ddf6290b-4cfa-4eb7-85db-d5b63a6c0d9c">
+	<property name="ireport.zoom" value="1.3310000000000055"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     petugas.`id_petugas` AS petugas_id_petugas,
+     petugas.`nama_petugas` AS petugas_nama_petugas
+FROM
+     `petugas` petugas]]>
+	</queryString>
+	<field name="petugas_id_petugas" class="java.lang.String"/>
+	<field name="petugas_nama_petugas" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<image>
+				<reportElement x="22" y="0" width="70" height="91" uuid="01dcb81e-5156-4a68-9f5f-77663387617e"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Documents\\NetBeansProjects\\AplikasiDataVaksin\\src\\image\\Jakarta.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="92" y="52" width="451" height="28" uuid="c4b8f7ca-5fb6-4946-834b-d5c1a5db1994"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[JI. Sina Marga NO.2 Telepon: 021-8444659, Fax: 021-8444636 Email: kecamatancipayungjaktim@yahoo.com Kode Pos : 13840]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="17" width="314" height="17" uuid="b6790cc0-b2b5-4833-b047-8a8b4a1ee15d"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KOTA ADMINISTRASI JAKARTA TIMUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="34" width="243" height="18" uuid="8a7b045a-fe58-4db8-9e67-978c0dfca299"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KECAMATAN CIPAYUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="437" height="17" uuid="caee0a29-5147-4265-b34d-b74d90dad03d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH PROVINSI DAERAH KHUSUS IBU KOTA JAKARTA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="90" width="555" height="1" uuid="babd60fd-b9d2-4f8f-aa42-46bd8f78a275"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="22065a08-5810-47c9-b24e-de932107ddca"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="5" width="100" height="20" uuid="b3c08f84-4697-4255-8d9d-f200efe7cd41"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<rectangle>
+				<reportElement x="270" y="9" width="156" height="20" uuid="3c32d374-dae3-49bd-8476-75505e7a2d77"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="270" y="9" width="156" height="20" uuid="39765ff1-40cb-41b1-9dbd-7e093d0b6822"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Petugas]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="128" y="9" width="142" height="20" uuid="cb97928e-cde7-4750-903a-4ac168549ad6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="128" y="9" width="142" height="20" uuid="08b9df6a-2dda-4bba-a09f-337b8863ab50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id Petugas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="270" y="0" width="156" height="20" uuid="b94e99da-32f4-4850-952c-5225c9c274a5"/>
+			</rectangle>
+			<textField>
+				<reportElement x="280" y="0" width="146" height="20" uuid="cfc92e18-7aa4-46d8-8a81-b12953cfa272"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{petugas_nama_petugas}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="128" y="0" width="142" height="20" uuid="6149cb2a-10c2-4665-a814-ab18e5e2b76d"/>
+			</rectangle>
+			<textField>
+				<reportElement x="128" y="0" width="142" height="20" uuid="50fcd36c-7fa6-4505-bbf3-cfe21e5b430b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{petugas_id_petugas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
